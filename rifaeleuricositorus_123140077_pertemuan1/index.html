@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Manajemen Tugas Mahasiswa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Manajemen Tugas Mahasiswa</h1>
+
+    <form id="taskForm">
+      <input type="text" id="taskName" placeholder="Nama Tugas" required />
+      <input type="text" id="courseName" placeholder="Mata Kuliah" required />
+      <input type="date" id="deadline" required />
+      <button type="submit">Tambah Tugas</button>
+    </form>
+
+    <div class="filter-container">
+      <input type="text" id="searchInput" placeholder="Cari berdasarkan mata kuliah..." />
+      <select id="statusFilter">
+        <option value="all">Semua</option>
+        <option value="pending">Belum Selesai</option>
+        <option value="done">Selesai</option>
+      </select>
+    </div>
+
+    <h3 id="taskCount">Tugas Belum Selesai: 0</h3>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
